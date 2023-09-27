@@ -1,14 +1,3 @@
-/*
-console.log('cao ca c ban');
-function sum(x, y) {
-    console.log('jaahaha')
-    debugger
-    return x + y
-}
-let z = sum(2, 3)
-console.log('Gia tri z = '+z)
-console.log(`c ac abc acb dia tri z = ${z}`);
-*/
 const express = require('express');
 const app = express();
 const dotenv = require('dotenv');

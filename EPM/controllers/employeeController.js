@@ -72,26 +72,6 @@ const deleteEmployee = (req, res) => {
   });
 };
 
-const streamVideo = (req, res) => {
-    debugger
-    const videoPath = require('path').resolve('./') + '/Video.mp4';
-    debugger
-    // Sử dụng ffmpeg để xử lý video và stream nó đến phản hồi (res)
-    const ffmpegCommand = ffmpeg()
-    .input(videoPath)
-    .outputFormat('flv'); // Loại video được stream là MP4
-    debugger
-    // Bắt đầu quá trình stream video
-    ffmpegCommand.on('end', () => {
-        debugger
-        console.log('Streaming ended');
-    });
-    
-    // Pipe dữ liệu từ ffmpeg đến phản hồi (res)
-    debugger
-    ffmpegCommand.pipe(res, { end: true });
-};
-
 module.exports = {
   getAllEmployees,
   getEmployeeById,

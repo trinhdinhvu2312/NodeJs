@@ -8,7 +8,6 @@ const dbConnection = createDBConnection();
 const employeeRepository = {
     // Lấy danh sách tất cả nhân viên
     getAllEmployees(callback) {
-        debugger
         const query = 'SELECT * FROM employees';
         dbConnection.query(query, (err, results) => {
         if (err) {
